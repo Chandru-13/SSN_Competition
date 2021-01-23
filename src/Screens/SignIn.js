@@ -17,6 +17,10 @@ export default class Signin extends React.Component {
             repass:'',
         }
     }
+
+    getAsu(){
+        this.props.navigation.navigate('Feed')
+    }
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -29,7 +33,7 @@ export default class Signin extends React.Component {
                     onChangeText={(text) => this.setState({ pass: text })} />
                 <TextInput style={styles.questionInput} textAlign='center' placeholder="Re-enter Password"
                     onChangeText={(text) => this.setState({ repass: text })} />
-                <TouchableOpacity style={styles.buttonBack} onPress={() => { this.props.navigation.navigate('Feed') }}>
+                <TouchableOpacity style={styles.buttonBack} onPress={() => this.getAsu}>
                     <Text style={styles.button}>SignUp</Text>
                 </TouchableOpacity>
             </View>

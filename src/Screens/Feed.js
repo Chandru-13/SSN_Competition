@@ -21,7 +21,10 @@ const windowHeight = Dimensions.get('window').height;
 
 class Feed extends React.Component {
     state = {
-        feed: [{id:1, name:'Chandru'}, {id:2, name:'Arun'}],
+        feed: [{ id: 1, name: 'Gowtham', image:'https://www.linkpicture.com/q/IMG-20201022-WA0020.jpg', like:10 , comment:3, share:1}, 
+            { id: 2, name: 'Arun', image: 'https://www.linkpicture.com/q/IMG-20201027-WA0010.jpg', like: 430, comment: 34, share: 21},
+            { id: 3, name: 'Bala', image: 'https://linkpicture.com/q/IMG-20201027-WA0011.jpg', like: 230, comment: 23, share: 12}
+        ],
     }
 
     componentDidMount() {

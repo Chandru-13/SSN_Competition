@@ -5,6 +5,7 @@ import { View, Text , TextInput, StyleSheet, TouchableOpacity, Dimensions} from 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+
 export default class Login extends React.Component {
 
     constructor(props) {
@@ -15,6 +16,7 @@ export default class Login extends React.Component {
             pass:''
         }
     }
+
     render() {
         return (
             <View style={{flex:1,alignItems:'center', justifyContent:'center'}}>
@@ -23,7 +25,7 @@ export default class Login extends React.Component {
                     onChangeText={(text) => this.setState({ email: text })} />
                 <TextInput style={styles.questionInput} textAlign='center' placeholder="Password"
                     onChangeText={(text) => this.setState({ pass: text })} />
-                <TouchableOpacity style={styles.buttonBack}>
+                <TouchableOpacity style={styles.buttonBack} onPress={() => { this.props.navigation.navigate('Feed') }}>
                     <Text style={styles.button}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonBack} onPress={()=>{this.props.navigation.navigate('Sign')}}>

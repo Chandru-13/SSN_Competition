@@ -24,22 +24,32 @@ class Post extends React.Component {
             <>
                 <View style={{flex:1, alignItems:'center', height:windowHeight, backgroundColor:'#fff'}}>
                     
-                    <Text style={{color:'#000'}}>{item.name}</Text>
-                
-                <View style={{flexDirection:'row', backgroundColor:'#fff',alignItems:'center' ,justifyContent:'center'}}>
+                 <Text style={{ color: '#000', fontSize:25, marginTop:20 }}>{item.name}</Text>
+                      
+                <View style={{flexDirection:'row', backgroundColor:'#fff',alignItems:'center' ,justifyContent:'center', marginTop:windowHeight-150}}>
+                    <View>
+
                     <Image
-                        style={{ height: 50, width: 50, paddingLeft:50 }}
+                        style={{ height: 50, width: 50, marginLeft:0 }}
                         source={require('../../myLike.png')}
                     />
+                    </View>
+                    <View>
+
                     <Image
-                        style={{height:50, width:50, paddingLeft:50}}
+                        style={{height:100, width:100, marginLeft:50}}
                         source={require('../../comment.png')}
                     />
+                    </View>
+                    <View>
                     <Image
-                        style={{ height: 50, width: 50, paddingLeft:50 }}
+                        style={{ height: 50, width: 50, marginLeft:50 }}
                         source={require('../../myshare.png')}
-                    />  
+                        />
+                        </View>
                 </View>
+
+                <Image style={{ height: 200, width: windowWidth, height: windowWidth+100, position:'absolute', marginTop:100}} source={{ uri: item.image }}></Image>
                 </View>
             </>
         )
